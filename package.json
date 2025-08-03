@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jominho.github.io/dizwe",
+  "homepage": "https://dizwe.github.io/dizwe_com",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
