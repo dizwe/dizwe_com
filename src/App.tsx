@@ -8,7 +8,7 @@ import './App.css'
 
 function App() {
   return (
-    <Router basename="/dizwe_com">
+    <Router basename="/">
       <div className="app">
         <Header />
         <main className="main-content">
