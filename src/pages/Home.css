@@ -232,6 +232,17 @@
   margin: 0 auto;
 }
 
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-card-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .project-card {
   background: white;
   border-radius: 20px;
@@ -240,6 +251,7 @@
   transition: all 0.3s ease;
   border: 1px solid #e2e8f0;
   position: relative;
+  cursor: pointer;
 }
 
 .project-card.featured {

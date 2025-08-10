@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Home.css'
 
 const Home: React.FC = () => {
@@ -81,21 +82,23 @@ const Home: React.FC = () => {
             </p>
           </div>
           <div className="project-grid">
-            <div className="project-card featured">
-              <div className="project-icon">🚶‍♂️</div>
-              <h3>밥먹고십분걷기</h3>
-              <p>
-                식후에 십분 걷는 습관을 만들기 위한 앱입니다.
-                <br />
-                간단한 목표 설정과 알림 기능으로
-                <br />
-                건강한 일상을 만들어가요.
-              </p>
-              <div className="project-tags">
-                <span className="tag">Flutter</span>
-                <span className="tag">건강</span>
+            <Link to="/walkten" className="project-card-link">
+              <div className="project-card featured">
+                <div className="project-icon">🚶‍♂️</div>
+                <h3>밥먹고십분걷기</h3>
+                <p>
+                  식후에 십분 걷는 습관을 만들기 위한 앱입니다.
+                  <br />
+                  간단한 목표 설정과 알림 기능으로
+                  <br />
+                  건강한 일상을 만들어가요.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Flutter</span>
+                  <span className="tag">건강</span>
+                </div>
               </div>
-            </div>
+            </Link>
             
             <div className="project-card coming-soon">
               <div className="project-icon">💡</div>
