@@ -61,13 +61,24 @@ const WalktenPage: React.FC = () => {
 
         <section className="download-section">
           <div className="download-content">
-            <h2>곧 출시 예정!</h2>
-            <p>
-              곧 App Store와 Google Play에서 만나실 수 있습니다.
-            </p>
-            <div className="development-status">
-              <span className="status-badge in-progress">배포 심사중</span>
-            </div>
+              <h2>지금 다운로드하세요!</h2>
+              <p>
+                <a
+                  href="https://apps.apple.com/kr/app/%EB%B0%A5%EB%A8%B9%EA%B3%A0%EC%8B%AD%EB%B6%84%EA%B1%B7%EA%B8%B0/id6747921969"
+                  className="appstore-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1709683200"
+                    alt="Download on the App Store"
+                    style={{ height: '40px' }}
+                  />
+                </a>
+              </p>
+              <div className="development-status">
+                <span className="status-badge released">App Store 출시 완료</span>
+              </div>
           </div>
         </section>
 
