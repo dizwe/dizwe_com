@@ -226,9 +226,9 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -252,6 +252,10 @@
   border: 1px solid #e2e8f0;
   position: relative;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 400px;
 }
 
 .project-card.featured {
@@ -288,10 +292,11 @@
   color: #718096;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  flex: 1 1 auto;
 }
 
 .project-status {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .status-badge {
@@ -308,10 +313,16 @@
   background: #ed8936;
 }
 
+.status-badge.in-development {
+  background: #fdcb6e;
+  color: #2c3e50;
+}
+
 .project-tags {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-top: 0;
 }
 
 .tag {
@@ -404,6 +415,11 @@
   .floating-icons .icon:nth-child(4) {
     transform: rotate(0deg) translateX(110px) rotate(0deg);
   }
+  
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+  }
 }
 
 /* Small screens (mobile) */
@@ -449,6 +465,11 @@
   
   .floating-icons .icon {
     font-size: 2rem;
+  }
+  
+  .project-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
   }
 }
 
