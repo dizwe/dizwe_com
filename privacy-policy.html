@@ -9,6 +9,10 @@
     body { font-family: 'Noto Sans KR', Arial, sans-serif; background: #f9f9fb; margin: 0; }
     .policy-page { padding: 32px 0; }
     .container { max-width: 700px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 32px; }
+    .language-selector { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 2rem; padding: 1rem; background: #f8fafc; border-radius: 12px; }
+    .lang-btn { padding: 0.5rem 1.5rem; border-radius: 8px; text-decoration: none; color: #4a5568; font-weight: 500; transition: all 0.3s ease; border: 2px solid transparent; }
+    .lang-btn:hover { background: rgba(102, 126, 234, 0.1); color: #667eea; }
+    .lang-btn.active { background: linear-gradient(45deg, #667eea, #764ba2); color: white; }
     .policy-header { text-align: center; margin-bottom: 32px; }
     .policy-header h1 { margin: 0 0 8px; font-size: 2.2rem; }
     .last-updated { color: #888; font-size: 0.95rem; }
@@ -30,14 +34,23 @@
   </style>
 </head>
 <body>
-  <header class="static-header">
-    <div class="static-header-inner">
-      <a href="/" class="static-header-logo">dizwe</a>
-      <a href="/" class="static-header-home">홈으로</a>
+  <header class="header-static">
+    <div class="header-static-inner">
+      <a href="/" class="header-logo"><span class="header-logo-text">dizwe</span></a>
+      <nav class="header-nav">
+        <a href="/" class="header-nav-link">홈</a>
+        <a href="/privacy-policy.html" class="header-nav-link active">개인정보처리방침</a>
+        <a href="/terms-of-service" class="header-nav-link">서비스약관</a>
+      </nav>
     </div>
   </header>
   <div class="policy-page">
     <div class="container">
+      <div class="language-selector">
+        <a href="/privacy-policy.html" class="lang-btn active">한국어</a>
+        <a href="/privacy-policy.en.html" class="lang-btn">English</a>
+        <a href="/privacy-policy.ja.html" class="lang-btn">日本語</a>
+      </div>
       <div class="policy-header">
         <h1>개인정보처리방침</h1>
         <p class="last-updated">최종 업데이트: 2025년 8월 3일</p>
@@ -174,6 +187,15 @@
 </html>
   <style>
     body { font-family: 'Noto Sans KR', Arial, sans-serif; background: #f9f9fb; margin: 0; }
+    .header-static { background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; padding: 1rem 0; margin-bottom: 32px; }
+    .header-static-inner { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+    .header-logo { display: flex; align-items: center; text-decoration: none; font-size: 1.5rem; font-weight: 700; color: #2d3748; transition: all 0.3s ease; }
+    .header-logo:hover { transform: scale(1.05); }
+    .header-logo-text { background: linear-gradient(45deg, #667eea, #764ba2); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .header-nav { display: flex; gap: 2rem; align-items: center; }
+    .header-nav-link { text-decoration: none; color: #4a5568; font-weight: 500; padding: 0.5rem 1rem; border-radius: 20px; transition: all 0.3s ease; position: relative; }
+    .header-nav-link:hover, .header-nav-link.active { color: #667eea; background: rgba(102,126,234,0.1); }
+    @media (max-width: 768px) { .header-nav { gap: 1rem; } .header-nav-link { font-size: 0.9rem; padding: 0.5rem; } .header-logo-text { font-size: 1.2rem; } }
     .policy-page { padding: 32px 0; }
     .container { max-width: 700px; margin: 0 auto; background: #fff; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 32px; }
     .policy-header { text-align: center; margin-bottom: 32px; }
@@ -193,11 +215,5 @@
     .policy-footer { margin-top: 40px; text-align: center; }
     .contact-btn { display: inline-block; margin-top: 10px; padding: 8px 18px; background: #2a5d9f; color: #fff; border-radius: 6px; text-decoration: none; font-size: 1rem; transition: background 0.2s; }
     .contact-btn:hover { background: #17406a; }
-    /* Header styles */
-    .static-header { width: 100%; background: #2a5d9f; padding: 0; margin: 0 0 32px 0; border-radius: 0 0 16px 16px; box-shadow: 0 2px 8px rgba(42,93,159,0.07); }
-    .static-header-inner { max-width: 700px; margin: 0 auto; display: flex; align-items: center; height: 56px; }
-    .static-header-logo { color: #fff; font-size: 1.3rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; margin-right: auto; padding-left: 18px; }
-    .static-header-home { color: #fff; font-size: 1rem; text-decoration: none; padding: 8px 16px; border-radius: 6px; transition: background 0.2s; }
-    .static-header-home:hover { background: #17406a; }
-    @media (max-width: 600px) { .container { padding: 16px; } .policy-header h1 { font-size: 1.4rem; } .static-header-inner { height: 44px; } .static-header-logo { font-size: 1rem; padding-left: 8px; } }
+    @media (max-width: 600px) { .container { padding: 16px; } .policy-header h1 { font-size: 1.4rem; } }
   </style>
