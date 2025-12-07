@@ -5,6 +5,12 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="policy-page">
       <div className="container">
+        <div className="language-selector">
+          <a href="/privacy-policy" className="lang-btn active">한국어</a>
+          <a href="/privacy-policy/en" className="lang-btn">English</a>
+          <a href="/privacy-policy/ja" className="lang-btn">日本語</a>
+        </div>
+        
         <div className="policy-header">
           <h1>개인정보처리방침</h1>
           <p className="last-updated">최종 업데이트: 2025년 8월 3일</p>

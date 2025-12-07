@@ -10,6 +10,38 @@
   padding: 0 20px;
 }
 
+.language-selector {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.lang-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.lang-btn:hover {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+}
+
+.lang-btn.active {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white;
+  border-color: transparent;
+}
+
 .policy-header {
   text-align: center;
   margin-bottom: 3rem;
