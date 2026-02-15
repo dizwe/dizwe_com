@@ -1,0 +1,319 @@
+.guico-page {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #d2b48c 0%, #8b6914 100%);
+}
+
+.guico-page .page-header {
+  text-align: center;
+  padding: 60px 0;
+  background: white;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.guico-page .app-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.guico-page .page-header h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.guico-page .app-subtitle {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  font-weight: 400;
+}
+
+.guico-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* App Description Section */
+.guico-page .app-description {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.guico-page .app-description h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.guico-page .description-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.guico-page .description-text h3 {
+  color: #8b4513;
+  font-size: 1.5rem;
+  margin: 30px 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.guico-page .feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.guico-page .feature-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #c8956e;
+}
+
+.guico-page .feature-icon {
+  font-size: 1.2rem;
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+.guico-page .feature-list strong {
+  color: #2c3e50;
+  margin-right: 8px;
+}
+
+/* Screenshots Section */
+.guico-page .app-screenshots {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.guico-page .app-screenshots h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.guico-page .screenshot-placeholder {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #d2b48c 0%, #8b6914 100%);
+  border-radius: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.guico-page .screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.guico-page .screenshot-item {
+  background: #f8f9fa;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guico-page .screenshot-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.guico-page .screenshot-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+/* Download Section */
+.guico-page .download-section {
+  background: linear-gradient(135deg, #c8956e 0%, #8b4513 100%);
+  border-radius: 20px;
+  padding: 60px 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.guico-page .download-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.guico-page .download-section p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.guico-page .status-badge {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.guico-page .status-badge.in-progress {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.guico-page .status-badge.released {
+  background: rgba(46, 213, 115, 0.3);
+  color: white;
+  border: 2px solid rgba(46, 213, 115, 0.5);
+}
+
+/* Contact Section */
+.guico-page .contact-section {
+  background: white;
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.guico-page .contact-section h2 {
+  color: #2c3e50;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.guico-page .contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.guico-page .contact-info {
+  margin: 30px 0;
+}
+
+.guico-page .contact-email {
+  display: inline-block;
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #c8956e 0%, #8b4513 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(200, 149, 110, 0.4);
+}
+
+.guico-page .contact-email:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(200, 149, 110, 0.6);
+  color: white;
+  text-decoration: none;
+}
+
+.guico-page .contact-note {
+  font-size: 1rem;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .guico-page {
+    padding-top: 70px;
+  }
+
+  .guico-page .page-header {
+    padding: 40px 20px;
+  }
+
+  .guico-page .page-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .guico-page .app-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .guico-page .app-description,
+  .guico-page .app-screenshots,
+  .guico-page .download-section,
+  .guico-page .contact-section {
+    padding: 30px 20px;
+    margin-bottom: 20px;
+  }
+
+  .guico-page .screenshot-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .guico-page .feature-list li {
+    padding: 12px;
+  }
+
+  .guico-page .download-section h2 {
+    font-size: 2rem;
+  }
+
+  .guico-page .download-section p {
+    font-size: 1.1rem;
+  }
+
+  .guico-page .screenshot-placeholder {
+    padding: 60px 20px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .guico-page .container {
+    padding: 0 15px;
+  }
+
+  .guico-page .page-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .guico-page .app-description h2,
+  .guico-page .app-screenshots h2,
+  .guico-page .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .guico-page .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guico-page .screenshot-placeholder {
+    padding: 40px 15px;
+    font-size: 1rem;
+  }
+}

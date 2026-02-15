@@ -1,14 +1,14 @@
 import React from 'react'
-import './PiacoPage.css'
+import './GuicoPage.css'
 
-const PiacoPage: React.FC = () => {
+const GuicoPage: React.FC = () => {
   return (
-    <div className="piaco-page">
+    <div className="guico-page">
       <div className="container">
         <div className="page-header">
-          <div className="app-icon">🎹</div>
-          <h1>Piaco</h1>
-          <p className="app-subtitle">피아노 코드 퀴즈로 음감을 키워보세요!</p>
+          <div className="app-icon">🎸</div>
+          <h1>Guico</h1>
+          <p className="app-subtitle">기타 코드 퀴즈로 음감을 키워보세요!</p>
         </div>
 
         <section className="app-description">
@@ -16,17 +16,17 @@ const PiacoPage: React.FC = () => {
             <h2>앱 소개</h2>
             <div className="description-text">
               <p>
-                <strong>Piaco</strong>는 피아노 코드를 듣고 맞추는 음감 트레이닝 앱입니다.
+                <strong>Guico</strong>는 기타 코드를 듣고 맞추는 음감 트레이닝 앱입니다.
               </p>
               <p>
-                화면에 나타나는 피아노 코드를 보고, 실제로 피아노를 연주하면 앱이 자동으로 소리를 감지해서 정답 여부를 확인해드립니다.
+                화면에 나타나는 기타 코드를 보고, 실제로 기타를 연주하면 앱이 자동으로 소리를 감지해서 정답 여부를 확인해드립니다.
               </p>
-              
+
               <h3>✨ 주요 기능</h3>
               <ul className="feature-list">
                 <li>
                   <span className="feature-icon">🎵</span>
-                  <strong>실시간 음성 감지</strong> - 피아노 소리를 자동으로 인식하여 정답을 확인해요
+                  <strong>실시간 음성 감지</strong> - 기타 소리를 자동으로 인식하여 정답을 확인해요
                 </li>
                 <li>
                   <span className="feature-icon">🎼</span>
@@ -49,52 +49,30 @@ const PiacoPage: React.FC = () => {
           <h2>앱 스크린샷</h2>
           <div className="screenshot-grid">
             <div className="screenshot-item">
-              <img src="/piaco/piaco_1.png" alt="Piaco 앱 스크린샷 1" />
+              <img src="/guico/guico_1.png" alt="Guico 앱 스크린샷 1" />
             </div>
             <div className="screenshot-item">
-              <img src="/piaco/piaco_2.png" alt="Piaco 앱 스크린샷 2" />
+              <img src="/guico/guico_2.png" alt="Guico 앱 스크린샷 2" />
             </div>
             <div className="screenshot-item">
-              <img src="/piaco/piaco_3.png" alt="Piaco 앱 스크린샷 3" />
+              <img src="/guico/guico_3.png" alt="Guico 앱 스크린샷 3" />
             </div>
             <div className="screenshot-item">
-              <img src="/piaco/piaco_4.png" alt="Piaco 앱 스크린샷 4" />
+              <img src="/guico/guico_4.png" alt="Guico 앱 스크린샷 4" />
             </div>
           </div>
         </section>
 
         <section className="download-section">
           <div className="download-content">
-              <h2>지금 다운로드하세요!</h2>
+              <h2>개발 중입니다</h2>
               <p>
-                <a
-                  href="https://apps.apple.com/app/id6756224587"
-                  className="appstore-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1709683200"
-                    alt="Download on the App Store"
-                    style={{ height: '40px' }}
-                  />
-                </a>
-                {' '}
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.dizwe.piaco"
-                  className="playstore-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png"
-                    alt="Google Play에서 다운로드"
-                    style={{ height: '48px' }}
-                  />
-                </a>
+                더 나은 음감 트레이닝 경험을 위해 열심히 개발 중입니다.
+                <br />
+                조금만 기다려주세요!
               </p>
               <div className="development-status">
-                <span className="status-badge released">출시 완료</span>
+                <span className="status-badge in-progress">개발 중</span>
               </div>
           </div>
         </section>
@@ -122,4 +100,4 @@ const PiacoPage: React.FC = () => {
   )
 }
 
-export default PiacoPage
+export default GuicoPage

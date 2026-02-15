@@ -118,6 +118,24 @@ const Home: React.FC = () => {
               </div>
             </Link>
             
+            <Link to="/guico" className="project-card-link">
+              <div className="project-card">
+                <div className="project-icon">🎸</div>
+                <h3>Guico</h3>
+                <p>
+                  기타 코드 퀴즈 앱입니다.
+                  <br />
+                  코드를 보고 연주하면 자동으로 소리를 감지해
+                  <br />
+                  정답을 확인해드려요!
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Flutter</span>
+                  <span className="tag">음악</span>
+                </div>
+              </div>
+            </Link>
+
             <div className="project-card coming-soon">
               <div className="project-icon">💡</div>
               <h3>다음 아이디어</h3>
