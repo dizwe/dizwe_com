@@ -9,6 +9,7 @@ import TermsOfServiceJA from './pages/TermsOfService.ja'
 import WalktenPage from './pages/WalktenPage'
 import PiacoPage from './pages/PiacoPage'
 import GuicoPage from './pages/GuicoPage'
+import DateYomiPage from './pages/DateYomiPage'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
@@ -24,6 +25,7 @@ function App() {
             <Route path="/walkten" element={<WalktenPage />} />
             <Route path="/piaco" element={<PiacoPage />} />
             <Route path="/guico" element={<GuicoPage />} />
+            <Route path="/dateyomi" element={<DateYomiPage />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/privacy-policy/en" element={<PrivacyPolicyEN />} />
             <Route path="/privacy-policy/ja" element={<PrivacyPolicyJA />} />

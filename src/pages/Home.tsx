@@ -136,6 +136,24 @@ const Home: React.FC = () => {
               </div>
             </Link>
 
+            <Link to="/dateyomi" className="project-card-link">
+              <div className="project-card">
+                <div className="project-icon">📅</div>
+                <h3>DateYomi</h3>
+                <p>
+                  일본어 날짜 읽기를 매일 알림으로 자연스럽게!
+                  <br />
+                  데일리 퀴즈와 홈 위젯으로
+                  <br />
+                  날짜 감각을 익혀보세요.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Flutter</span>
+                  <span className="tag">언어</span>
+                </div>
+              </div>
+            </Link>
+
             <div className="project-card coming-soon">
               <div className="project-icon">💡</div>
               <h3>다음 아이디어</h3>

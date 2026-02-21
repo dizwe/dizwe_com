@@ -65,15 +65,24 @@ const GuicoPage: React.FC = () => {
 
         <section className="download-section">
           <div className="download-content">
-              <h2>개발 중입니다</h2>
-              <p>
-                더 나은 음감 트레이닝 경험을 위해 열심히 개발 중입니다.
-                <br />
-                조금만 기다려주세요!
-              </p>
-              <div className="development-status">
-                <span className="status-badge in-progress">개발 중</span>
-              </div>
+            <h2>지금 다운로드하세요!</h2>
+            <p>
+              <a
+                href="https://apps.apple.com/kr/app/guico-ai-%EA%B8%B0%ED%83%80-%EC%BD%94%EB%93%9C-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%84%88/id6759184000"
+                className="appstore-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1709683200"
+                  alt="Download on the App Store"
+                  style={{ height: '40px' }}
+                />
+              </a>
+            </p>
+            <div className="development-status">
+              <span className="status-badge released">출시 완료</span>
+            </div>
           </div>
         </section>
 
