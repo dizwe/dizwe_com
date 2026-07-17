@@ -30,19 +30,17 @@
 .main-title em {
   font-style: normal;
   position: relative;
+  isolation: isolate; /* 스택 컨텍스트 생성 → 빨강 스와이프가 배경 뒤로 사라지지 않게 */
   white-space: nowrap;
   color: var(--paper);
-  padding: 0 5px;
+  padding: 0 8px;
 }
 .main-title em::after {
   content: "";
   position: absolute;
-  left: -2px;
-  right: -2px;
-  bottom: 4px;
-  height: 38%;
+  inset: -0.02em -4px; /* 글자 전체를 덮는 빨강 블록 */
   background: var(--red);
-  transform: rotate(-1deg);
+  transform: rotate(-1.2deg);
   z-index: -1;
 }
 
