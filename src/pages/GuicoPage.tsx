@@ -79,6 +79,19 @@ const GuicoPage: React.FC = () => {
                   style={{ height: '40px' }}
                 />
               </a>
+              {' '}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.dizwe.guico"
+                className="playstore-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png"
+                  alt="Google Play에서 다운로드"
+                  style={{ height: '48px' }}
+                />
+              </a>
             </p>
             <div className="development-status">
               <span className="status-badge released">출시 완료</span>

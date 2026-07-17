@@ -69,14 +69,41 @@ const DateYomiPage: React.FC = () => {
 
         <section className="download-section">
           <div className="download-content">
-            <h2>개발 중입니다</h2>
+            <h2>지금 다운로드하세요!</h2>
             <p>
-              더 자연스러운 일본어 날짜 학습 경험을 위해 열심히 개발 중입니다.
+              App Store와 Google Play에서 DateYomi를 만나보세요!
               <br />
-              조금만 기다려주세요!
+              오늘의 날짜부터 일본어로 읽어볼까요?
+            </p>
+            <p>
+              <a
+                href="https://apps.apple.com/app/id6759133325"
+                className="appstore-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1709683200"
+                  alt="Download on the App Store"
+                  style={{ height: '40px' }}
+                />
+              </a>
+              {' '}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.dizwe.dateyomi"
+                className="playstore-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/ko_badge_web_generic.png"
+                  alt="Google Play에서 다운로드"
+                  style={{ height: '48px' }}
+                />
+              </a>
             </p>
             <div className="development-status">
-              <span className="status-badge in-progress">개발 중</span>
+              <span className="status-badge released">출시 완료</span>
             </div>
           </div>
         </section>

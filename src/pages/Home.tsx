@@ -154,6 +154,24 @@ const Home: React.FC = () => {
               </div>
             </Link>
 
+            <Link to="/katayomi" className="project-card-link">
+              <div className="project-card">
+                <div className="project-icon">カ</div>
+                <h3>Katayomi</h3>
+                <p>
+                  가타카나 읽기를 매일 노출로 자동화!
+                  <br />
+                  아는 외래어로 속도 훈련 퀴즈와
+                  <br />
+                  홈 위젯으로 눈에 익혀보세요.
+                </p>
+                <div className="project-tags">
+                  <span className="tag">Flutter</span>
+                  <span className="tag">언어</span>
+                </div>
+              </div>
+            </Link>
+
             <div className="project-card coming-soon">
               <div className="project-icon">💡</div>
               <h3>다음 아이디어</h3>
