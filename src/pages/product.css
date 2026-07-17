@@ -1,0 +1,197 @@
+/* =========================================================================
+   공용 제품 페이지 스타일 (Walkten / Piaco / Guico / DateYomi / Katayomi)
+   각 페이지는 .product-page + tint 클래스만 다르게 준다.
+   ========================================================================= */
+.product-page {
+  min-height: 100vh;
+  padding-top: 56px;
+  background: var(--paper);
+}
+
+.product-page .container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 공용 패널 (인쇄 어긋남) */
+.product-page .app-description,
+.product-page .app-screenshots,
+.product-page .download-section,
+.product-page .contact-section {
+  position: relative;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  padding: clamp(28px, 4vw, 46px) clamp(20px, 3vw, 40px);
+  margin-bottom: 48px;
+  z-index: 0;
+}
+.product-page .app-description::after,
+.product-page .app-screenshots::after,
+.product-page .download-section::after,
+.product-page .contact-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--tint);
+  transform: translate(6px, 6px);
+  z-index: -1;
+}
+
+/* ---- Header ---- */
+.product-page .page-header {
+  text-align: center;
+  padding: clamp(44px, 6vw, 72px) 20px clamp(32px, 4vw, 52px);
+}
+.product-page .app-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 20px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--tint);
+  background: var(--paper);
+}
+.product-page .app-icon svg { width: 38px; height: 38px; }
+.product-page .page-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--ink);
+  margin-bottom: 12px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.product-page .app-subtitle {
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* ---- Description ---- */
+.product-page .app-description h2,
+.product-page .app-screenshots h2,
+.product-page .download-section h2,
+.product-page .contact-section h2 {
+  color: var(--ink);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+.product-page .description-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+.product-page .description-text strong { color: var(--ink); }
+.product-page .description-text h3 {
+  color: var(--ink);
+  font-size: 1.25rem;
+  margin: 30px 0 18px;
+  font-weight: 800;
+}
+
+.product-page .feature-list { list-style: none; padding: 0; }
+.product-page .feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 14px 16px;
+  background: var(--paper-2);
+  border-left: 4px solid var(--tint);
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.product-page .feature-list strong { color: var(--ink); margin-right: 6px; }
+/* 이모지 아이콘 → 리소 마커 */
+.product-page .feature-icon {
+  font-size: 0;
+  flex: none;
+  margin-top: 8px;
+}
+.product-page .feature-icon::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: var(--tint);
+}
+
+/* ---- Screenshots ---- */
+.product-page .screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.product-page .screenshot-item {
+  border: 2px solid var(--ink);
+  background: var(--paper-2);
+  overflow: hidden;
+  transition: transform 0.18s ease;
+}
+.product-page .screenshot-item:hover { transform: translateY(-4px); }
+.product-page .screenshot-item img { width: 100%; height: auto; display: block; }
+
+/* ---- Download ---- */
+.product-page .download-section { text-align: center; }
+.product-page .download-section p { font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft); margin-bottom: 26px; }
+.product-page .download-section .download-content > p:has(a) { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
+
+.product-page .development-status { margin-top: 22px; }
+.product-page .status-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border: 2px solid var(--ink);
+}
+.product-page .status-badge.released { background: var(--tint); color: var(--paper); }
+.product-page .status-badge.in-progress { background: var(--paper); color: var(--ink); border-style: dashed; }
+
+/* DateYomi 커스텀 스토어 버튼 */
+.product-page .store-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.product-page .store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.product-page .store-btn:hover { color: var(--paper); background: var(--ink-soft); }
+.product-page .store-btn .store-sub { display: block; font-size: 0.68rem; font-weight: 500; opacity: 0.85; }
+.product-page .store-btn .store-name { display: block; font-size: 1rem; font-weight: 800; }
+
+/* ---- Contact ---- */
+.product-page .contact-section { text-align: center; }
+.product-page .contact-section p { font-size: 1.05rem; line-height: 1.7; color: var(--ink-soft); margin-bottom: 24px; }
+.product-page .contact-info { margin: 24px 0; }
+.product-page .contact-email {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 800;
+}
+.product-page .contact-email:hover { background: var(--tint); color: var(--paper); }
+.product-page .contact-note { font-size: 0.95rem; color: var(--muted); margin-top: 18px; }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .product-page { padding-top: 48px; }
+  .product-page .screenshot-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+}
+@media (max-width: 480px) {
+  .product-page .container { padding: 0 16px; }
+  .product-page .screenshot-grid { grid-template-columns: 1fr; }
+}

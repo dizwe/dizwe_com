@@ -1,5 +1,6 @@
 import React from 'react'
-import './WalktenPage.css'
+import './product.css'
+import AppIcon from '../components/AppIcon'
 import image1 from '../assets/walkten/image1.jpeg'
 import image2 from '../assets/walkten/image2.jpeg'
 import image3 from '../assets/walkten/image3.jpeg'
@@ -7,10 +8,10 @@ import image4 from '../assets/walkten/image4.jpeg'
 
 const WalktenPage: React.FC = () => {
   return (
-    <div className="walkten-page">
+    <div className="product-page tint-red">
       <div className="container">
         <div className="page-header">
-          <div className="app-icon">🚶‍♂️</div>
+          <div className="app-icon"><AppIcon app="walkten" size={38} /></div>
           <h1>밥먹고십분걷기</h1>
           <p className="app-subtitle">식후에 십분 걷는 건강한 습관을 만들어보세요!</p>
         </div>

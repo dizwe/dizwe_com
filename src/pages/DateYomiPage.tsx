@@ -1,12 +1,13 @@
 import React from 'react'
-import './DateYomiPage.css'
+import './product.css'
+import AppIcon from '../components/AppIcon'
 
 const DateYomiPage: React.FC = () => {
   return (
-    <div className="dateyomi-page">
+    <div className="product-page tint-blue">
       <div className="container">
         <div className="page-header">
-          <div className="app-icon">📅</div>
+          <div className="app-icon"><AppIcon app="dateyomi" size={38} /></div>
           <h1>DateYomi</h1>
           <p className="app-subtitle">오늘의 날짜, 일본어로는 뭐였더라?</p>
         </div>

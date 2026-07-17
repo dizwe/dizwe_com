@@ -8,6 +8,7 @@ const Header: React.FC = () => {
       <div className="container">
         <Link to="/" className="logo">
           <span className="logo-text">dizwe</span>
+          <span className="logo-stamp">1인 개발실</span>
         </Link>
         <nav className="nav">
           <Link to="/" className="nav-link">홈</Link>

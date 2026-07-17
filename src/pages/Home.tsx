@@ -1,72 +1,88 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { apps } from '../data/apps'
+import AppIcon from '../components/AppIcon'
 import './Home.css'
+
+const stickers = apps.filter((a) => a.sticker)
 
 const Home: React.FC = () => {
   return (
     <div className="home">
       <section className="hero">
-        <div className="hero-content">
+        <div className="container hero-grid">
           <div className="hero-text">
+            <span className="riso-stamp hero-kicker">Since 2025 · 뚝딱뚝딱 스튜디오</span>
             <h1 className="main-title">
-              일상에서 만나는 작은 아이디어,
-              <br />
-              <span className="highlight">뚝딱뚝딱</span> 앱으로 만들어요! 🔨✨
+              일상의 작은 아이디어를 <em>진짜 쓰는 앱</em>으로 만들어요
             </h1>
             <p className="subtitle">
-              평범한 일상 속에서 발견한 "이런 게 있으면 좋겠다"는 작은 아이디어들을
-              <br />
-              실제로 사용할 수 있는 앱으로 만드는 개발자입니다.
+              “이런 게 있으면 좋겠다” 싶은 평범한 순간의 생각들.
+              꼭 필요한 핵심 기능만 담아, 실제로 사용할 수 있는 앱으로 하나씩 만듭니다.
             </p>
-            <div className="cta-buttons">
-              <button className="cta-primary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>프로젝트 보기</button>
-            </div>
+            <button
+              className="riso-btn"
+              onClick={() =>
+                document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
+              }
+            >
+              만든 앱 보기
+            </button>
           </div>
-          <div className="hero-illustration">
-            <div className="illustration-placeholder">
-              🧑‍💻
-              <div className="floating-icons">
-                <span className="icon">💡</span>
-                <span className="icon">📱</span>
-                <span className="icon">⚡</span>
-                <span className="icon">🎨</span>
+
+          <div className="hero-stickers" aria-hidden="true">
+            {stickers.map((app, i) => (
+              <div key={app.key} className={`hero-sticker sk-${i + 1} tint-${app.tint}`}>
+                <span className="sk-mark">
+                  <AppIcon app={app.key} size={18} />
+                </span>
+                <span className="sk-body">
+                  {app.name}
+                  <small>{app.blurb}</small>
+                </span>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="about">
         <div className="container">
-          <h2>About dizwe</h2>
+          <div className="section-head">
+            <h2>어떻게 만드나요</h2>
+          </div>
           <div className="about-content">
             <div className="about-text">
-              <h3>💭 아이디어부터 앱까지</h3>
-              <p>
-                "밥먹고 십분 걷는 습관 어떻게 만들까?" 같은
-                일상의 작은 아이디어들이 앱의 시작점이 됩니다.
-              </p>
-              
-              <h3>🛠️ 빠르고 심플하게</h3>
-              <p>
-                복잡한 기능보다는 정말 필요한 핵심 기능에 집중해서
-                누구나 쉽게 사용할 수 있는 앱을 만듭니다.
-              </p>
-              
-              <h3>🎯 사용자 중심으로</h3>
-              <p>
-                실제로 사용하는 사람들의 피드백을 듣고,
-                계속해서 더 나은 경험을 만들어갑니다.
-              </p>
+              <div className="about-point">
+                <h3>아이디어부터 앱까지</h3>
+                <p>
+                  “밥먹고 십분 걷는 습관 어떻게 만들까?” 같은
+                  일상의 작은 아이디어들이 앱의 시작점이 됩니다.
+                </p>
+              </div>
+              <div className="about-point">
+                <h3>빠르고 심플하게</h3>
+                <p>
+                  복잡한 기능보다는 정말 필요한 핵심 기능에 집중해서
+                  누구나 쉽게 사용할 수 있는 앱을 만듭니다.
+                </p>
+              </div>
+              <div className="about-point">
+                <h3>사용자 중심으로</h3>
+                <p>
+                  실제로 사용하는 사람들의 피드백을 듣고,
+                  계속해서 더 나은 경험을 만들어갑니다.
+                </p>
+              </div>
             </div>
             <div className="about-stats">
-              <div className="stat">
-                <div className="stat-number">🌱</div>
-                <div className="stat-label">시작하는 개발자</div>
+              <div className="stat riso-card tint-red">
+                <div className="stat-number">{apps.length}</div>
+                <div className="stat-label">만든 앱</div>
               </div>
-              <div className="stat">
-                <div className="stat-number">24/7</div>
-                <div className="stat-label">아이디어 탐지 모드</div>
+              <div className="stat riso-card tint-blue">
+                <div className="stat-number">∞</div>
+                <div className="stat-label">구상 중인 아이디어</div>
               </div>
             </div>
           </div>
@@ -75,113 +91,39 @@ const Home: React.FC = () => {
 
       <section id="projects" className="projects">
         <div className="container">
-          <h2>dizwe는 열심히 개발중!</h2>
-          <div className="project-intro">
-            <p>
-              작은 것부터 차근차근, 의미 있는 앱을 만들어보려고 합니다.
-            </p>
+          <div className="section-head">
+            <h2>작업대 위의 앱들</h2>
+            <p className="section-sub">작은 것부터 차근차근, 의미 있는 앱을 만들어보려고 합니다.</p>
           </div>
-          <div className="project-grid">
-            <Link to="/walkten" className="project-card-link">
-              <div className="project-card featured">
-                <div className="project-icon">🚶‍♂️</div>
-                <h3>밥먹고십분걷기</h3>
-                <p>
-                  식후에 십분 걷는 습관을 만들기 위한 앱입니다.
-                  <br />
-                  간단한 목표 설정과 알림 기능으로
-                  <br />
-                  건강한 일상을 만들어가요.
-                </p>
-                <div className="project-tags">
-                  <span className="tag">Flutter</span>
-                  <span className="tag">건강</span>
+          <div className="project-board">
+            {apps.map((app) => (
+              <Link
+                key={app.key}
+                to={app.route}
+                className={`project-card riso-card tint-${app.tint}`}
+              >
+                <span className="pin" />
+                <span className="project-mark">
+                  <AppIcon app={app.key} size={24} />
+                </span>
+                <h3>{app.name}</h3>
+                <p>{app.blurb}</p>
+                <div className="project-foot">
+                  <span className="tag">{app.tag}</span>
+                  {app.status === 'in-progress' && <span className="tag ghost">개발 중</span>}
                 </div>
-              </div>
-            </Link>
-            
-            <Link to="/piaco" className="project-card-link">
-              <div className="project-card">
-                <div className="project-icon">🎹</div>
-                <h3>Piaco</h3>
-                <p>
-                  피아노 코드 퀴즈 앱입니다.
-                  <br />
-                  코드를 보고 연주하면 자동으로 소리를 감지해
-                  <br />
-                  정답을 확인해드려요!
-                </p>
-                <div className="project-tags">
-                  <span className="tag">Flutter</span>
-                  <span className="tag">음악</span>
-                </div>
-              </div>
-            </Link>
-            
-            <Link to="/guico" className="project-card-link">
-              <div className="project-card">
-                <div className="project-icon">🎸</div>
-                <h3>Guico</h3>
-                <p>
-                  기타 코드 퀴즈 앱입니다.
-                  <br />
-                  코드를 보고 연주하면 자동으로 소리를 감지해
-                  <br />
-                  정답을 확인해드려요!
-                </p>
-                <div className="project-tags">
-                  <span className="tag">Flutter</span>
-                  <span className="tag">음악</span>
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
 
-            <Link to="/dateyomi" className="project-card-link">
-              <div className="project-card">
-                <div className="project-icon">📅</div>
-                <h3>DateYomi</h3>
-                <p>
-                  일본어 날짜 읽기를 매일 알림으로 자연스럽게!
-                  <br />
-                  데일리 퀴즈와 홈 위젯으로
-                  <br />
-                  날짜 감각을 익혀보세요.
-                </p>
-                <div className="project-tags">
-                  <span className="tag">Flutter</span>
-                  <span className="tag">언어</span>
-                </div>
-              </div>
-            </Link>
-
-            <Link to="/katayomi" className="project-card-link">
-              <div className="project-card">
-                <div className="project-icon">カ</div>
-                <h3>Katayomi</h3>
-                <p>
-                  가타카나 읽기를 매일 노출로 자동화!
-                  <br />
-                  아는 외래어로 속도 훈련 퀴즈와
-                  <br />
-                  홈 위젯으로 눈에 익혀보세요.
-                </p>
-                <div className="project-tags">
-                  <span className="tag">Flutter</span>
-                  <span className="tag">언어</span>
-                </div>
-              </div>
-            </Link>
-
-            <div className="project-card coming-soon">
-              <div className="project-icon">💡</div>
+            <div className="project-card riso-card tint-muted soon">
+              <span className="pin" />
+              <span className="project-mark">
+                <AppIcon app="next" size={24} />
+              </span>
               <h3>다음 아이디어</h3>
-              <p>
-                매일 새로운 아이디어들이 떠오르고 있어요. 
-                <br />
-                어떤 앱을 다음에 만들지 고민 중입니다!
-              </p>
-              <div className="project-status">
-                <span className="status-badge thinking">구상중</span>
+              <p>매일 새로운 아이디어가 떠오르고 있어요. 어떤 앱을 다음에 만들지 고민 중입니다.</p>
+              <div className="project-foot">
+                <span className="tag ghost">구상중</span>
               </div>
             </div>
           </div>
@@ -189,20 +131,16 @@ const Home: React.FC = () => {
       </section>
 
       <section className="contact">
-        <div className="container">
-          <div className="contact-content">
-            <h2>함께 만들어요! 🤝</h2>
-            <p>
-              좋은 아이디어가 있거나, 함께 프로젝트를 진행하고 싶으시다면
-              <br />
-              언제든지 이메일로 연락해주세요!
-            </p>
-            <div className="contact-methods">
-              <a href="mailto:dizwe@dizwe.com" className="contact-btn">
-                📧 dizwe@dizwe.com
-              </a>
-            </div>
-          </div>
+        <div className="container contact-content">
+          <h2>함께 만들어요</h2>
+          <p>
+            좋은 아이디어가 있거나, 함께 프로젝트를 진행하고 싶으시다면
+            <br />
+            언제든지 이메일로 연락해주세요.
+          </p>
+          <a href="mailto:dizwe@dizwe.com" className="riso-btn home-contact-btn">
+            dizwe@dizwe.com
+          </a>
         </div>
       </section>
     </div>

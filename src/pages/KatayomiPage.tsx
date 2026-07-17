@@ -1,12 +1,13 @@
 import React from 'react'
-import './KatayomiPage.css'
+import './product.css'
+import AppIcon from '../components/AppIcon'
 
 const KatayomiPage: React.FC = () => {
   return (
-    <div className="katayomi-page">
+    <div className="product-page tint-red">
       <div className="container">
         <div className="page-header">
-          <div className="app-icon">カ</div>
+          <div className="app-icon"><AppIcon app="katayomi" size={38} /></div>
           <h1>Katayomi</h1>
           <p className="app-subtitle">가타카나, 아는 단어인데 왜 안 읽히지?</p>
         </div>

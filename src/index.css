@@ -1,9 +1,8 @@
 :root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  color: #333;
-  background-color: #ffffff;
+  color: var(--ink);
+  background-color: var(--paper);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,10 +25,10 @@ html, body {
 body {
   min-width: 320px;
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-kr);
   line-height: 1.6;
-  color: #333;
-  background-color: #ffffff;
+  color: var(--ink);
+  background-color: var(--paper);
 }
 
 #root {
@@ -39,34 +38,34 @@ body {
 
 a {
   font-weight: 500;
-  color: #667eea;
+  color: var(--ink);
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #764ba2;
+  color: var(--red);
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 button {
-  border-radius: 8px;
   border: none;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 600;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 2px solid #667eea;
-  outline-offset: 2px;
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
 }

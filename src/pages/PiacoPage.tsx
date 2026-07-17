@@ -1,12 +1,13 @@
 import React from 'react'
-import './PiacoPage.css'
+import './product.css'
+import AppIcon from '../components/AppIcon'
 
 const PiacoPage: React.FC = () => {
   return (
-    <div className="piaco-page">
+    <div className="product-page tint-blue">
       <div className="container">
         <div className="page-header">
-          <div className="app-icon">🎹</div>
+          <div className="app-icon"><AppIcon app="piaco" size={38} /></div>
           <h1>Piaco</h1>
           <p className="app-subtitle">피아노 코드 퀴즈로 음감을 키워보세요!</p>
         </div>

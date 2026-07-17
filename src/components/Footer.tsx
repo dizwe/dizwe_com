@@ -34,14 +34,14 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4>연락처</h4>
             <div className="contact-info">
-              <p>📧 dizwe@dizwe.com</p>
+              <p><a href="mailto:dizwe@dizwe.com">dizwe@dizwe.com</a></p>
             </div>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
-          <p>&copy; 2025 dizwe. All rights reserved.</p>
-          <p>Made with ❤️ and lots of ☕</p>
+          <p>&copy; 2025 dizwe</p>
+          <p>한 사람이, 손으로, 하나씩.</p>
         </div>
       </div>
     </footer>
