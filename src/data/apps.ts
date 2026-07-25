@@ -61,6 +61,6 @@ export const apps: AppItem[] = [
     tag: '언어',
     tint: 'red',
     blurb: '가타카나 읽기를 매일 노출과 속도 훈련 퀴즈로',
-    status: 'in-progress',
+    status: 'released',
   },
 ]

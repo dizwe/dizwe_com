@@ -69,19 +69,36 @@ const KatayomiPage: React.FC = () => {
             <div className="screenshot-item">
               <img src="/katayomi/katayomi_3.png" alt="Katayomi 앱 스크린샷 3" />
             </div>
+            <div className="screenshot-item">
+              <img src="/katayomi/katayomi_4.png" alt="Katayomi 앱 스크린샷 4" />
+            </div>
           </div>
         </section>
 
         <section className="download-section">
           <div className="download-content">
-            <h2>개발 중입니다</h2>
+            <h2>지금 다운로드하세요!</h2>
             <p>
-              가타카나 읽기를 자동화하는 훈련 경험을 위해 열심히 개발 중입니다.
+              App Store에서 Katayomi를 만나보세요.
               <br />
-              곧 App Store와 Google Play에서 만나요!
+              아는 외래어로 가타카나 읽는 속도를 눈에 익혀볼까요?
+            </p>
+            <p>
+              <a
+                href="https://apps.apple.com/app/id6790161106"
+                className="appstore-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&amp;releaseDate=1709683200"
+                  alt="Download on the App Store"
+                  style={{ height: '40px' }}
+                />
+              </a>
             </p>
             <div className="development-status">
-              <span className="status-badge in-progress">개발 중</span>
+              <span className="status-badge released">출시 완료</span>
             </div>
           </div>
         </section>
